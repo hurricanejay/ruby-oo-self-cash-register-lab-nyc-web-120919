@@ -4,6 +4,7 @@ class CashRegister
         @total = 0
         @discount = discount
         @item_array = []
+        @last_transation_amount = 0
     end
     def discount
          @discount
@@ -36,6 +37,8 @@ class CashRegister
          else
             return "There is no discount to apply."
           end
+    end
+    self.last_transaction_amount = price * quantity
     end
 
 end
